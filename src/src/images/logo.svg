@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="196" viewBox="0 0 210 196">
+  <g id="Grupo_38" data-name="Grupo 38" transform="translate(-83 -308)">
+    <g id="Grupo_28" data-name="Grupo 28" transform="translate(0 -22)">
+      <g id="Grupo_27" data-name="Grupo 27" transform="translate(59 109)">
+        <g id="Retângulo_29" data-name="Retângulo 29" transform="translate(50 221)" fill="#e5e5e5" stroke="#f74a17" stroke-width="4">
+          <rect width="158" height="153" rx="25" stroke="none"/>
+          <rect x="2" y="2" width="154" height="149" rx="23" fill="none"/>
+        </g>
+        <g id="Grupo_36" data-name="Grupo 36">
+          <g id="Retângulo_3" data-name="Retângulo 3" transform="translate(62 230)" fill="#f74a17" stroke="#f74a17" stroke-width="1">
+            <rect width="66" height="66" rx="15" stroke="none"/>
+            <rect x="0.5" y="0.5" width="65" height="65" rx="14.5" fill="none"/>
+          </g>
+          <g id="Grupo_35" data-name="Grupo 35">
+            <g id="Retângulo_36" data-name="Retângulo 36" transform="translate(132 230)" fill="#f7f7f7" stroke="#f74a17" stroke-width="1">
+              <rect width="66" height="66" rx="15" stroke="none"/>
+              <rect x="0.5" y="0.5" width="65" height="65" rx="14.5" fill="none"/>
+            </g>
+            <text id="_" data-name=" 👻 " transform="translate(134 277)" fill="#18171a" font-size="40" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0"> </tspan><tspan y="0" font-family="AppleColorEmoji, Apple Color Emoji" font-weight="400">👻</tspan><tspan y="0"> </tspan></text>
+          </g>
+        </g>
+        <g id="Grupo_37" data-name="Grupo 37" transform="translate(0 69)">
+          <g id="Retângulo_3-2" data-name="Retângulo 3" transform="translate(132 230)" fill="#f74a17" stroke="#f74a17" stroke-width="1">
+            <rect width="66" height="66" rx="15" stroke="none"/>
+            <rect x="0.5" y="0.5" width="65" height="65" rx="14.5" fill="none"/>
+          </g>
+          <g id="Grupo_35-2" data-name="Grupo 35" transform="translate(62 230)">
+            <g id="Retângulo_36-2" data-name="Retângulo 36" fill="#f7f7f7" stroke="#f74a17" stroke-width="1">
+              <rect width="66" height="66" rx="15" stroke="none"/>
+              <rect x="0.5" y="0.5" width="65" height="65" rx="14.5" fill="none"/>
+            </g>
+            <text id="_2" data-name=" 👻 " transform="matrix(-1, 0, 0, 1, 64, 47)" fill="#18171a" font-size="40" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0"> </tspan><tspan y="0" font-family="AppleColorEmoji, Apple Color Emoji" font-weight="400">👻</tspan><tspan y="0"> </tspan></text>
+          </g>
+        </g>
+      </g>
+      <text id="Memory_Game" data-name="Memory Game" transform="translate(188 519)" fill="#18171a" font-size="30" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="-104.955" y="0">Memory Game</tspan></text>
+    </g>
+  </g>
+</svg>

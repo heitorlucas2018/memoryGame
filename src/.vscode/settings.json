@@ -1,0 +1,16 @@
+{
+    "typescript.check.npmIsInstalled": true,
+    "tsimporter.filesToScan": [
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "javascript.suggest.autoImports": true,
+    "typescript.workspaceSymbols.scope": "currentProject",
+    "eslint.alwaysShowStatus": false,
+    "eslint.format.enable": false,
+    "eslint.lintTask.enable": false,
+    "eslint.nodeEnv": ".eslintrc.js",
+    "eslint.options": {
+    
+    }
+}
