@@ -1,41 +1,51 @@
 import React from 'react';
-import { Pressable, SafeAreaView, StyleSheet, Text, View, FlatList} from 'react-native';
+import { Pressable, SafeAreaView, StyleSheet, Text, View, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import ButtonGoBack from '../../components/ButtonGoBack';
-import { Colors } from '../../helpers/utils';
+import { Colors } from '../../Constants/Colors';
 
 const AboutPageView = ({ navigation }) => {
     return (
-        <SafeAreaView>
-            <ButtonGoBack
-                style={[styled.buttonClouse]}
-                colorIcon={Colors.textColor}
-                size={30}
-                iconName="close"
-            />
-            <View style={{ padding: 10 }}>
-                <Text style={styled.textTitle}>About </Text>
-               <SafeAreaView style={{ marginTop: 40, padding: 5 }} >
+        <SafeAreaView style={{ display: 'flex', flex: 1 }}>
+            <View style={{ display: 'flex', flex: 1, padding: 10}}>
+                <View style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignContent: 'space-between',
+                    alignItems: 'baseline'
+                }}>
+                    <Text style={styled.textTitle}>About </Text>
+                    <ButtonGoBack
+                        style={[styled.buttonClouse]}
+                        colorIcon={Colors.textColor}
+                        size={30}
+                        iconName="close"
+                    />
+                </View>
+
+                <SafeAreaView style={{ marginTop: 40, padding: 5, display: 'flex', flex: 1 }} >
                     <FlatList
                         data={dataList}
                         key={({ index }) => index}
                         renderItem={({ item, index }) =>
                             <ItemList
                                 label={item.label}
-                                data={item.content}/>}
+                                data={item.content} />}
                     />
                 </SafeAreaView>
             </View>
+            <Text style={{textAlign: 'center'}}>Powered by heitorSantos.com </Text>
         </SafeAreaView>
     );
 }
 
 export function ItemList({ label, data, navigation }) {
-    const {navigate} = useNavigation()
+    const { navigate } = useNavigation()
     return (
         <Pressable
-            onPress={() => navigate("Content", {title: label, content: data})}
+            onPress={() => navigate("Content", { title: label, content: data })}
             style={styled.itemList} >
             <Text style={styled.textSubTitle}>{label}</Text>
             <Icon name="right" size={20} color={Colors.textColor} />
@@ -58,8 +68,6 @@ const styled = StyleSheet.create({
         justifyContent: 'center',
         alignContent: 'center',
         alignItems: 'center',
-        position: 'absolute',
-        right: 10,
         elevation: 3,
         fontSize: 30,
         zIndex: 1

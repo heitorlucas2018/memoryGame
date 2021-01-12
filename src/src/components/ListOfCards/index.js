@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Modal, SafeAreaView, Text, useWindowDimensions, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import { ScoreViewContext } from '../../helpers/utils';
+import { ScoreViewContext } from '../../Constants/Colors';
 
 import Card from '../Card/Index'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { Colors } from '../../helpers/utils'
+import { Colors } from '../../Constants/Colors'
 import ButtonGoBack from '../ButtonGoBack'
 
 export default function Header({ text, styleContainer, styleText, children, goBack }) {

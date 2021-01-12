@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import ButtonGoBack from '../../components/ButtonGoBack';
-import { Colors } from '../../helpers/utils';
+import { Colors } from '../../Constants/Colors';
 
 const AboutPageView = ({ route }) => {
     const { title, content } = route.params
-    
+
     return (
         <SafeAreaView>
             <View style={{ padding: 10 }}>

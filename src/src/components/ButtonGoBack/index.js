@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pressable, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign'
-import { Colors } from '../../helpers/utils'
+import { Colors } from '../../Constants/Colors'
 import { useNavigation } from '@react-navigation/native'
 
 export default function ButtonGoBack({ style, size, colorIcon, iconName }) {

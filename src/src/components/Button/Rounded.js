@@ -4,7 +4,7 @@ import {
   StyleSheet,
 } from "react-native";
 import Icon from 'react-native-vector-icons/AntDesign';
-import { Colors } from '../../helpers/utils';
+import { Colors } from '../../Constants/Colors';
 
 export default function ButtonRounded({ style, iconName, onCLick, color }) {
   const __onPress = () => {

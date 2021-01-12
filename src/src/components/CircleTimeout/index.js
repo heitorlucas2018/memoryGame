@@ -3,7 +3,7 @@ import { Text, View, ViewPropTypes } from 'react-native';
 import ProgressCircle from 'react-native-progress-circle'
 import PropTypes from 'prop-types';
 
-import { Colors } from '../../helpers/utils'
+import { Colors } from '../../Constants/Colors'
 
 class CircleTime extends React.Component {
 

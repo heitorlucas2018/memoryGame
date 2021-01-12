@@ -13,7 +13,7 @@ import {
 import Icon from 'react-native-vector-icons/AntDesign'
 import { useNavigation } from '@react-navigation/native'
 
-import { gameOfData } from '../helpers/constants'
+import { gameOfData } from '../Constants/Data'
 import Header from '../components/Header'
 import ButtonAbout from '../components/Button/Rounded'
 
