@@ -5,7 +5,8 @@ import Header from '../components/Header';
 import ListCards from '../components/ListOfCards';
 import Button from '../components/Button/Rounded'
 
-import { ColorButtons, Colors, Embaralhar, ScoreViewContext } from '../helpers/utils'
+import { ColorButtons, Colors, } from '../Constants/Colors'
+import { Embaralhar, ScoreViewContext } from '../helpers/utils'
 
 export default function MemoryEmoticonVew({ route, navigation }) {
     const [score, setScore] = useState(0);

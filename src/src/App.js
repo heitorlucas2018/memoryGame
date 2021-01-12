@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { SafeAreaView, Text, View, StatusBar } from 'react-native';
-import { Colors } from './helpers/utils';
+import { Colors } from './Constants/Colors';
 import Routes from './Routes'
 
 

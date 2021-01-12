@@ -7,7 +7,7 @@ import { CardStyle } from './style';
 
 function Card({ typeContent, content, style, size, isFaceUp, onSelected, afterClosure }) {
   const dowFace = !isFaceUp ? CardStyle.isDowFace : null;
-  const area = size < 50 ? 110 : size;
+  const area = size < 50 ? 100 : size;
   const handleAfterEvent = () => {
     if (afterClosure instanceof Function) {
       afterClosure()

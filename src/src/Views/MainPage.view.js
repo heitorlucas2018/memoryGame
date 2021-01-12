@@ -21,6 +21,7 @@ export default function MainPage({ route, navigation }) {
     const { width, height } = useWindowDimensions()
     const [largura, setLargura] = useState(new Animated.Value(0))
     const [altura, setAltura] = useState(new Animated.Value(0));
+    const [opacity, setOpacity] = useState(new Animated.Value(0));
 
 
     useEffect(() => {
@@ -28,10 +29,17 @@ export default function MainPage({ route, navigation }) {
             Animated.timing(largura, {
                 toValue: Math.floor(width * .85),
                 duration: 1000,
+                useNativeDriver: false
             }),
             Animated.timing(altura, {
                 toValue: Math.floor(height * .5),
                 duration: 1000,
+                useNativeDriver: false
+            }),
+            Animated.timing(opacity, {
+                toValue: 1,
+                duration: 1000,
+                useNativeDriver: false
             }),
         ]).start()
     })
@@ -41,9 +49,7 @@ export default function MainPage({ route, navigation }) {
             <ButtonAbout
                 style={styled.button}
                 iconName="infocirlceo"
-                onCLick={() => {
-                    navigation.navigate("About")
-                }}
+                onCLick={() => navigation.navigate("About")}
             />
             <Animated.View
                 style={[
@@ -53,6 +59,7 @@ export default function MainPage({ route, navigation }) {
                         width: largura,
                         height: altura
                     }]}>
+                <Animated.View style={{opacity: opacity, flex: 1}}>
                 <Header
                     text={`Selecione o modelo dos cartões`}
                     styleContainer={[styled.header]}
@@ -68,6 +75,7 @@ export default function MainPage({ route, navigation }) {
                         data={data}
                         typeList={type} />)}
                 />
+               </Animated.View>
             </Animated.View>
         </SafeAreaView>
     )
@@ -129,7 +137,7 @@ const styled = StyleSheet.create({
         margin: 10
     },
     header: {
-        top: -10,
+        top: -2,
         margin: 0,
         marginLeft: -2,
         marginRight: -2,

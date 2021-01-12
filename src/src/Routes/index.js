@@ -8,7 +8,6 @@ import MemoryEmoticonView from '../Views/MemoryEmoticonView';
 import MainPage from '../Views/MainPage.view';
 import AboutPageView from '../Views/AboutPage.stack';
 
-
 const MainStack = createStackNavigator();
 
 const config = {
@@ -54,14 +53,14 @@ export default function RouteOfApp() {
                 initialRouteName="Home"
                 mode="card"
                 headerMode="none"
-                screenOptions={{
+/*                 screenOptions={{
                     gestureEnabled: true,
                     gestureDirection: 'horizontal',
                     transitionSpec: {
                         open: config,
                         close: configClose,
                     },
-                }}
+                }} */
             >
                 <MainStack.Screen name="Home" component={MainPage} />
                 <MainStack.Screen name="Game" component={MemoryEmoticonView} />

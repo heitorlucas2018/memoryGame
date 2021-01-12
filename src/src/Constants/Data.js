@@ -1,5 +1,6 @@
 export const gameOfData = [
     {
+        id: 0,
         type: `text`,
         content: `Emoticos`,
         data: [
@@ -13,6 +14,7 @@ export const gameOfData = [
         ]
     },  
     {
+        id: 1,
         type: `color`,
         content: `Cores`,
         data: [

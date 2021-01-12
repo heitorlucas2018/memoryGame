@@ -1,30 +1,14 @@
 import React from 'react';
 import { Pressable, SafeAreaView, StyleSheet, Text, View, FlatList } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import ButtonGoBack from '../../components/ButtonGoBack';
+import Header from '../../components/Header';
 import { Colors } from '../../Constants/Colors';
 
 const AboutPageView = ({ navigation }) => {
     return (
         <SafeAreaView style={{ display: 'flex', flex: 1 }}>
-            <View style={{ display: 'flex', flex: 1, padding: 10}}>
-                <View style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignContent: 'space-between',
-                    alignItems: 'baseline'
-                }}>
-                    <Text style={styled.textTitle}>About </Text>
-                    <ButtonGoBack
-                        style={[styled.buttonClouse]}
-                        colorIcon={Colors.textColor}
-                        size={30}
-                        iconName="close"
-                    />
-                </View>
-
+            <View style={{ display: 'flex', flex: 1, padding: 10 }}>
+                <Header text="About" goBack={true} />
                 <SafeAreaView style={{ marginTop: 40, padding: 5, display: 'flex', flex: 1 }} >
                     <FlatList
                         data={dataList}
@@ -32,17 +16,19 @@ const AboutPageView = ({ navigation }) => {
                         renderItem={({ item, index }) =>
                             <ItemList
                                 label={item.label}
-                                data={item.content} />}
+                                data={item.content}
+                                navigation={navigation}
+                            />}
                     />
                 </SafeAreaView>
             </View>
-            <Text style={{textAlign: 'center'}}>Powered by heitorSantos.com </Text>
+            <Text style={{ textAlign: 'center' }}>Powered by heitorSantos.com </Text>
         </SafeAreaView>
     );
 }
 
-export function ItemList({ label, data, navigation }) {
-    const { navigate } = useNavigation()
+export function ItemList({ label, data, navigation: { navigate } }) {
+
     return (
         <Pressable
             onPress={() => navigate("Content", { title: label, content: data })}

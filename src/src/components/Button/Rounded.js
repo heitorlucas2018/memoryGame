@@ -8,6 +8,7 @@ import { Colors } from '../../Constants/Colors';
 
 export default function ButtonRounded({ style, iconName, onCLick, color }) {
   const __onPress = () => {
+    console.log(`click button `)
     if (onCLick instanceof Function) {
       onCLick()
     }

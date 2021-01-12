@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/AntDesign";
-import { Colors } from "../../helpers/utils";
+import { Colors } from "../../Constants/Colors";
 
 import Button from '../Button'
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Modal, SafeAreaView, Text, useWindowDimensions, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-import { ScoreViewContext } from '../../Constants/Colors';
+import { ScoreViewContext } from '../../helpers/utils';
 
 import Card from '../Card/Index'
 
@@ -16,9 +16,6 @@ function ListOfCards({ data, numColumns, tyleList }) {
 
 
   useEffect(() => {
-
-    console.log(`init componente ListOfCards`)
-
     setArrayOfCards([])
     setSelections([])
     function calcDimension() {
@@ -26,13 +23,11 @@ function ListOfCards({ data, numColumns, tyleList }) {
       const value = ((width * height) / 1000)  //(width < height) ? width : height
       const area = Math.floor((value / data.length))
       setDimension(area)
-      console.log(`dimension data:`, area, width, height, data.length)
     }
     calcDimension()
   }, [data])
 
   const onSelect = (card) => {
-    console.log(`Event::__onSelect() `, selections, card)
     if (selections.length < 2 && !selections.includes(card)) {
       setSelections((cards) => [...cards, card])
     } else {

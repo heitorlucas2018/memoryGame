@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import ButtonGoBack from '../../components/ButtonGoBack';
+import Header from '../../components/Header';
 import { Colors } from '../../Constants/Colors';
 
 const AboutPageView = ({ route }) => {
@@ -9,20 +10,9 @@ const AboutPageView = ({ route }) => {
     return (
         <SafeAreaView>
             <View style={{ padding: 10 }}>
-                <View style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'baseline',
-                    justifyContent: 'flex-start'
-                }}>
-                    <ButtonGoBack
-                        style={[styled.buttonClouse]}
-                        size={30}
-                        colorIcon={Colors.textColor}
-                        iconName="left"
-                    />
-                    <Text style={styled.textTitle}>{title || 'Title'}</Text>
-                </View>
+                <Header
+                    text={title}
+                    goBack={true} />
                 <SafeAreaView style={{ marginTop: 40, padding: 5 }} >
                     <Text style={styled.textBody}>{content}</Text>
                 </SafeAreaView>

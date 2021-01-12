@@ -26,7 +26,6 @@ export default function Header({ text, styleContainer, styleText, children, goBa
 
 const styles = StyleSheet.create({
     container: {
-        margin: 10,
         borderWidth: 2,
         padding: 10,
         paddingLeft: 5,
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
         alignContent: 'center',
     },
     text: {
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 'bold',
         color: Colors.textColor,
         textAlign: 'center',
