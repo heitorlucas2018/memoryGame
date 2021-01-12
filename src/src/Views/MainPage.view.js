@@ -1,5 +1,15 @@
-import React from 'react'
-import { View, FlatList, StyleSheet, Text, SafeAreaView, useWindowDimensions, Pressable, Image } from 'react-native'
+// @ts-nocheck
+import React, { useState, useEffect } from 'react'
+import {
+    FlatList,
+    StyleSheet,
+    Text,
+    SafeAreaView,
+    useWindowDimensions,
+    Pressable,
+    Animated,
+    Easing
+} from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign'
 import { useNavigation } from '@react-navigation/native'
 
@@ -7,8 +17,24 @@ import { gameOfData } from '../helpers/constants'
 import Header from '../components/Header'
 import ButtonAbout from '../components/Button/Rounded'
 
-export default function MainPage({route, navigation}) {
+export default function MainPage({ route, navigation }) {
     const { width, height } = useWindowDimensions()
+    const [largura, setLargura] = useState(new Animated.Value(0))
+    const [altura, setAltura] = useState(new Animated.Value(0));
+
+
+    useEffect(() => {
+        Animated.sequence([
+            Animated.timing(largura, {
+                toValue: Math.floor(width * .85),
+                duration: 1000,
+            }),
+            Animated.timing(altura, {
+                toValue: Math.floor(height * .5),
+                duration: 1000,
+            }),
+        ]).start()
+    })
 
     return (
         <SafeAreaView style={[styled.container, styled.sobreamento]}>
@@ -19,10 +45,17 @@ export default function MainPage({route, navigation}) {
                     navigation.navigate("About")
                 }}
             />
-            <View style={[styled.content, styled.sobreamento, { width: Math.floor(width * 0.85), height: Math.floor(height * 0.5) }]}>
+            <Animated.View
+                style={[
+                    styled.content,
+                    styled.sobreamento,
+                    {
+                        width: largura,
+                        height: altura
+                    }]}>
                 <Header
                     text={`Selecione o modelo dos cartões`}
-                    styleContainer={[styled.header, { width: Math.floor(width * 0.85) }]}
+                    styleContainer={[styled.header]}
                 />
                 <FlatList
                     style={styled.list}
@@ -35,7 +68,7 @@ export default function MainPage({route, navigation}) {
                         data={data}
                         typeList={type} />)}
                 />
-            </View>
+            </Animated.View>
         </SafeAreaView>
     )
 }

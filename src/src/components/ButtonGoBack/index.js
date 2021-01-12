@@ -9,7 +9,6 @@ export default function ButtonGoBack({ style, size, colorIcon, iconName }) {
 
     return (
         <Pressable style={[styled.conteiner, style]} onPress={() => {
-            console.log('teste de click')
             navigation.goBack()
         }}>
             <Icon name={(iconName || 'arrowleft')} size={(size || 60)} color={(colorIcon || Colors.main)} />

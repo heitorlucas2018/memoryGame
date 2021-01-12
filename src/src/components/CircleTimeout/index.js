@@ -56,8 +56,8 @@ class CircleTime extends React.Component {
             <ProgressCircle
                 percent={(percent || 0)}
                 radius={(size || 50)}
-                borderWidth={8}
-                color={Colors.main}
+                borderWidth={7}
+                color={Colors.progress}
                 shadowColor={Colors.with}
                 bgColor={Colors.with}
             >

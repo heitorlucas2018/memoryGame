@@ -68,7 +68,7 @@ function ListOfCards({ data, numColumns, tyleList }) {
               key={i}
               typeContent={tyleList}
               content={e.content}
-              isFaceUp={(isMatch || faceUp)}
+              isFaceUp={(isMatch || faceUp)} 
               size={dimension}
               onSelected={() => onSelect(i)}
               afterClosure={() => setSelections([])}

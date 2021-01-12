@@ -1,5 +1,6 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react'
-import { SafeAreaView, Text, StyleSheet, View } from 'react-native'
+import { Animated, Text, StyleSheet, View, Easing, SafeAreaView, ActivityIndicator } from 'react-native'
 import Header from '../components/Header';
 import ListCards from '../components/ListOfCards';
 import Button from '../components/Button/Rounded'
@@ -20,7 +21,6 @@ export default function MemoryEmoticonVew({ route, navigation }) {
         if (dataPairs.length > 0)
             return;
         setDataPairs(Embaralhar([...data, ...data]))
-        console.log(`iniciando lista de jogo`)
     }, [resetGame]);
 
     return (
@@ -50,6 +50,7 @@ export default function MemoryEmoticonVew({ route, navigation }) {
                     Acertos: {score}
                 </Text>
             </View>
+            { !dataPairs.length && <ActivityIndicator size='large' color={Colors.main} />}
             <View style={styled.contentList}>
                 <ScoreViewContext.Provider value={{ score, setScore, setResetGame }}>
                     <ListCards
@@ -68,7 +69,7 @@ const styled = StyleSheet.create({
         margin: 3,
         display: 'flex',
         flex: 1,
-        backgroundColor: '#fcc169',
+        backgroundColor: '#fcc169'
     },
     sobreamento: {
         shadowColor: '#000',

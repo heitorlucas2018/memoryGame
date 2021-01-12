@@ -6,7 +6,7 @@ export const Colors = {
   main: '#f87901',
   textColor: '#16171A',
   card: '#f87901',
-  progress: '#a5a5a5',
+  progress: '#ffd79a',
   backgroundMain: '#fcc169',
   with: '#f0f0f0'
 };
