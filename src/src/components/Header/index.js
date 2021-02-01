@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { Colors } from '../../Constants/Colors'
+import FontFamily from '../../Constants/FontsFamily';
 import ButtonGoBack from '../ButtonGoBack'
 
 export default function Header({ text, styleContainer, styleText, children, goBack }) {
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        alignContent: 'center'
+        alignContent: 'center',
     },
     button: {
         left: 0,
@@ -54,6 +55,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: Colors.textColor,
         textAlign: 'center',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        fontFamily: FontFamily.title
     }
 })
