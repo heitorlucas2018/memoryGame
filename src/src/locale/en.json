@@ -2,7 +2,12 @@
     "header": {
         "page": {
             "main": "Selection model of cards",
-            "about": "About"
+            "profile": "Informations"
+        }
+    },
+    "container": {
+        "evaluation": {
+            "title": "Avalie-nos"
         }
     }
 }

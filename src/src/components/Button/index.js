@@ -7,7 +7,7 @@ import {
   TouchableHighlight,
 } from "react-native";
 
-export default function index({ text, onCLick, color }) {
+export default function index({ text, onCLick, color, childdren }) {
   const __onPress = () => {
     if (onCLick instanceof Function) {
       onCLick()

@@ -49,7 +49,7 @@ export default function MainPage({ route, navigation }) {
             <ButtonAbout
                 style={styled.button}
                 iconName="infocirlceo"
-                onCLick={() => navigation.navigate("About")}
+                onCLick={() => navigation.navigate("Profile")}
             />
             <Animated.View
                 style={[

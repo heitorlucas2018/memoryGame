@@ -1,3 +1,3 @@
-import AboutPageView from "./AboutPagesContainer" 
+import ProfilePageView from "./ProfilePagesContainer" 
 
-export { AboutPageView }
+export { ProfilePageView }

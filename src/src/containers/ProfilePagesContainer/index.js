@@ -1,17 +1,17 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import AboutPageView from './AboutPage.View';
+import ProfilePageView from './ProfilePage.View';
 import ContentPage from './ContentPage.View'
 
 const Navigation = createStackNavigator();
 
-export default function AboutPageStack() {
+export default function ProfilePageStack() {
     return (
         <Navigation.Navigator
-            initialRouteName="AboutPage"
+            initialRouteName="ProfilePage"
             headerMode="none"
         >
-            <Navigation.Screen name="AboutPage" component={AboutPageView} />
+            <Navigation.Screen name="ProfilePage" component={ProfilePageView} />
             <Navigation.Screen name="Content" component={ContentPage} />
         </Navigation.Navigator>
     )

@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import MemoryEmoticonView from '../Views/MemoryEmoticonView';
 import MainPage from '../Views/MainPage.view';
-import AboutPageView from '../Views/AboutPage.stack';
+import ProfilePageView from '../Views/ProfilePage.stack';
 
 const MainStack = createStackNavigator();
 
@@ -64,7 +64,7 @@ export default function RouteOfApp() {
             >
                 <MainStack.Screen name="Home" component={MainPage} />
                 <MainStack.Screen name="Game" component={MemoryEmoticonView} />
-                <MainStack.Screen name="About" component={AboutPageView} />
+                <MainStack.Screen name="Profile" component={ProfilePageView} />
             </MainStack.Navigator>
         </NavigationContainer>
     )

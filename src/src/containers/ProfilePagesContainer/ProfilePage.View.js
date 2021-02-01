@@ -1,20 +1,31 @@
-import React from 'react';
-import { Pressable, SafeAreaView, StyleSheet, Text, View, FlatList } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Pressable, SafeAreaView, StyleSheet, Text, View, FlatList, ActivityIndicator } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../../components/Header';
 import { Colors } from '../../Constants/Colors';
+import EvaluationContainer from '../EvaluationContainer';
 
-const AboutPageView = ({ navigation }) => {
+const ProfilePageView = ({ navigation }) => {
+
+    const [listbyData, setListbyData] = useState([]);
+
+    useEffect(() => {
+        setListbyData(dataList)
+    }, []);
+
     return (
         <SafeAreaView style={{ display: 'flex', flex: 1 }}>
             <View style={{ display: 'flex', flex: 1, padding: 10 }}>
-                <Header keyString="header.page.about" goBack={true} />
+                <Header keyString="header.page.profile" goBack={true} />
                 <SafeAreaView style={{ marginTop: 40, padding: 5, display: 'flex', flex: 1 }} >
+                    {!listbyData.length &&
+                        <ActivityIndicator size="large" color={Colors.main} />}
                     <FlatList
-                        data={dataList}
-                        key={({ index }) => index}
+                        data={listbyData}
+                        key={({ item, index }) => index}
                         renderItem={({ item, index }) =>
                             <ItemList
+                                key={index}
                                 label={item.label}
                                 data={item.content}
                                 navigation={navigation}
@@ -22,7 +33,10 @@ const AboutPageView = ({ navigation }) => {
                     />
                 </SafeAreaView>
             </View>
-            <Text style={{ textAlign: 'center' }}>Powered by heitorSantos.com </Text>
+            <View>
+                <Text style={{ textAlign: 'center' }}>Powered by heitorSantos.com </Text>
+                <Text style={{ textAlign: 'center' }}>Version 1.0.1 </Text>
+            </View>
         </SafeAreaView>
     );
 }
@@ -41,6 +55,7 @@ export function ItemList({ label, data, navigation: { navigate } }) {
 
 const dataList = [
     { id: 0, label: 'Privacy Policy', content: 'Text documentation' },
+    { id: 1, label: 'Feedback', content: <EvaluationContainer /> },
 ]
 
 const styled = StyleSheet.create({
@@ -85,4 +100,4 @@ const styled = StyleSheet.create({
         fontSize: 20,
     }
 })
-export default AboutPageView;
+export default ProfilePageView;

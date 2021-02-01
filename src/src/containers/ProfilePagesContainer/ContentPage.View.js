@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import ButtonGoBack from '../../components/ButtonGoBack';
 import Header from '../../components/Header';
 import { Colors } from '../../Constants/Colors';
 
-const AboutPageView = ({ route }) => {
+const ProfilePageView = ({ route }) => {
     const { title, content } = route.params
+
+    const children = (content instanceof Object) ?
+        content :
+        (<Text style={styled.textBody}>{content}</Text>);
 
     return (
         <SafeAreaView>
@@ -14,7 +18,7 @@ const AboutPageView = ({ route }) => {
                     text={title}
                     goBack={true} />
                 <SafeAreaView style={{ marginTop: 40, padding: 5 }} >
-                    <Text style={styled.textBody}>{content}</Text>
+                    {children}
                 </SafeAreaView>
             </View>
         </SafeAreaView>
@@ -52,4 +56,4 @@ const styled = StyleSheet.create({
         textAlign: 'justify'
     }
 })
-export default AboutPageView;
+export default ProfilePageView;

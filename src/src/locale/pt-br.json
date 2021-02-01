@@ -2,7 +2,12 @@
     "header": {
         "page": {
             "main": "Selecione o modelo dos cartões.",
-            "about": "About"
+            "profile": "Informacões"
+        }
+    },
+    "container": {
+        "evaluation": {
+            "title": "Fale Conosco"
         }
     }
 }
