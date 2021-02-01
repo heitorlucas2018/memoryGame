@@ -38,7 +38,6 @@ function Card({ typeContent, content, style, size, isFaceUp, onSelected, afterCl
 }
 
 export function CardContent({ type, content }) {
-  console.log(`content Card`, content, type)
   if (type == 'text') {
     return <Text style={CardStyle.text}>{content}</Text>
   } else if (type == 'image') {

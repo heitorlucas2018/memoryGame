@@ -17,6 +17,7 @@ import { gameOfData } from '../Constants/Data'
 import Header from '../components/Header'
 import ButtonAbout from '../components/Button/Rounded'
 import useLocaleByObject from '../locale/hooks/useLocaleByObject'
+import FontFamily from '../Constants/FontsFamily'
 
 export default function MainPage({ route, navigation }) {
     const { width, height } = useWindowDimensions()
@@ -158,7 +159,8 @@ const styled = StyleSheet.create({
         fontSize: 20,
         fontWeight: '300',
         marginLeft: 15,
-        flex: 1.5
+        flex: 1.5,
+        fontFamily: FontFamily.title
     },
     button: {
         position: 'absolute',
