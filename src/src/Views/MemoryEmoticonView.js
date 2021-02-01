@@ -11,7 +11,7 @@ import { Embaralhar, ScoreViewContext } from '../helpers/utils'
 export default function MemoryEmoticonVew({ route, navigation }) {
     const [score, setScore] = useState(0);
     const [resetGame, setResetGame] = useState(true);
-    const { model, data, typeList } = route.params
+    const { titlePage, data, typeList } = route.params
     const [dataPairs, setDataPairs] = useState([]);
 
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function MemoryEmoticonVew({ route, navigation }) {
     return (
         <SafeAreaView style={[styled.container, styled.sobreamento]}>
             <Header
-                text={`${model}`}
+                text={titlePage}
                 goBack={true}
                 styleText={{ fontSize: 30 }}
                 styleContainer={[styled.header, styled.sobreamento]}

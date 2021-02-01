@@ -16,13 +16,13 @@ import { useNavigation } from '@react-navigation/native'
 import { gameOfData } from '../Constants/Data'
 import Header from '../components/Header'
 import ButtonAbout from '../components/Button/Rounded'
+import useLocaleByObject from '../locale/hooks/useLocaleByObject'
 
 export default function MainPage({ route, navigation }) {
     const { width, height } = useWindowDimensions()
     const [largura, setLargura] = useState(new Animated.Value(0))
     const [altura, setAltura] = useState(new Animated.Value(0));
     const [opacity, setOpacity] = useState(new Animated.Value(0));
-
 
     useEffect(() => {
         Animated.sequence([
@@ -59,23 +59,23 @@ export default function MainPage({ route, navigation }) {
                         width: largura,
                         height: altura
                     }]}>
-                <Animated.View style={{opacity: opacity, flex: 1}}>
-                <Header
-                    text={`Selecione o modelo dos cartões`}
-                    styleContainer={[styled.header]}
-                />
-                <FlatList
-                    style={styled.list}
-                    data={gameOfData}
-                    keyExtractor={({ item, index }) => index}
-                    renderItem={({ item: { content, data, type }, index }) =>
-                    (<ItemList
-                        key={index}
-                        content={content}
-                        data={data}
-                        typeList={type} />)}
-                />
-               </Animated.View>
+                <Animated.View style={{ opacity: opacity, flex: 1 }}>
+                    <Header
+                        keyString={`header.page.main`}
+                        styleContainer={[styled.header]}
+                    />
+                    <FlatList
+                        style={styled.list}
+                        data={gameOfData}
+                        keyExtractor={({ item, index }) => index}
+                        renderItem={({ item: { content, data, type }, index }) =>
+                        (<ItemList
+                            key={index}
+                            content={content}
+                            data={data}
+                            typeList={type} />)}
+                    />
+                </Animated.View>
             </Animated.View>
         </SafeAreaView>
     )
@@ -83,15 +83,16 @@ export default function MainPage({ route, navigation }) {
 
 const ItemList = ({ content, data, typeList }) => {
     const navigation = useNavigation();
+    const textLabel = useLocaleByObject(content)
     const __onClick = () => {
-        navigation.navigate('Game', { model: content, typeList: typeList, data: data })
+        navigation.navigate('Game', { titlePage: textLabel, typeList: typeList, data: data })
     }
     return (
         <Pressable
             style={styled.itemContainer}
             onPress={__onClick}>
             <Text style={styled.itemText}>
-                {content}
+                {textLabel}
             </Text>
             <Icon name='right' size={20} />
         </Pressable>

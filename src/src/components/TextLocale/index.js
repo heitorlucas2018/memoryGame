@@ -1,10 +1,12 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { NativeModules, Platform, Text } from 'react-native'
+import { useLocale } from '../../locale/hooks';
 
-export default function index({ textKey }) {
+export default function TextLocale({ text, keyString, style, ...props }) {
+    const textLabel = (text != null) ? text : useLocale(keyString);
     return (
-        <Text>
-            {textKey}
+        <Text style={style} {...props} >
+            {textLabel}
         </Text>
     )
 }

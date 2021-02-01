@@ -2,7 +2,10 @@ export const gameOfData = [
     {
         id: 0,
         type: `text`,
-        content: `Emoticos`,
+        content: {
+            pt: 'Emoticos',
+            en: 'Emoticos'
+        },
         data: [
             { content: '👻' },
             { content: '💀' },
@@ -16,7 +19,10 @@ export const gameOfData = [
     {
         id: 1,
         type: `color`,
-        content: `Cores`,
+        content: {
+            pt: `Cores`,
+            en: `Colors`,
+        },
         data: [
             { content: '#c21296' },
             { content: '#c2b612' },

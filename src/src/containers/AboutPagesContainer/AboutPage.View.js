@@ -8,7 +8,7 @@ const AboutPageView = ({ navigation }) => {
     return (
         <SafeAreaView style={{ display: 'flex', flex: 1 }}>
             <View style={{ display: 'flex', flex: 1, padding: 10 }}>
-                <Header text="About" goBack={true} />
+                <Header keyString="header.page.about" goBack={true} />
                 <SafeAreaView style={{ marginTop: 40, padding: 5, display: 'flex', flex: 1 }} >
                     <FlatList
                         data={dataList}

@@ -1,4 +1,4 @@
-import useLocale from "../src/locale/hooks/useLocale";
+import { useLocale } from "../src/locale/hooks/";
 
 test('test hook useLocale - key not exists', () => {
     const value = `header.text`

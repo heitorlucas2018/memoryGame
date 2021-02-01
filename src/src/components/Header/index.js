@@ -3,8 +3,9 @@ import { View, Text, StyleSheet } from 'react-native'
 import { Colors } from '../../Constants/Colors'
 import FontFamily from '../../Constants/FontsFamily';
 import ButtonGoBack from '../ButtonGoBack'
+import TextLocale from '../TextLocale';
 
-export default function Header({ text, styleContainer, styleText, children, goBack }) {
+export default function Header({ text, keyString, styleContainer, styleText, children, goBack }) {
     const goBackStyled = goBack ? styles.goBack : null;
 
     return (
@@ -16,9 +17,10 @@ export default function Header({ text, styleContainer, styleText, children, goBa
                         style={styles.button}
                         colorIcon={Colors.textColor}
                     />}
-                <Text style={[styles.text, styleText]}>
-                    {text || `Bem Vindo - Memory Game`}
-                </Text>
+                <TextLocale
+                    text={text}
+                    keyString={keyString}
+                    style={[styles.text, styleText]} />
                 {children}
             </View>
         </View>
