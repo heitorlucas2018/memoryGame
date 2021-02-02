@@ -6,13 +6,15 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import { SafeAreaView, Text, View, StatusBar } from 'react-native';
+import React, { useEffect, useState} from 'react';
+import { SafeAreaView, View, StatusBar, ActivityIndicator } from 'react-native';
+import SplashScreen from './components/SplashScreen';
 import { Colors } from './Constants/Colors';
 import Routes from './Routes'
 
 
 const App: () => React$Node = () => {
+  
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.with}}>
       <StatusBar
@@ -20,9 +22,8 @@ const App: () => React$Node = () => {
         animated={true}
         translucent={true}
         barStyle="default"
-        backgroundColor={Colors.main}
         showHideTransition="slide"/>
-      <View style={{flex: 1, padding: 2}}>
+      <View style={{ flex: 1, padding: 2 }}>
         <Routes />
       </View>
     </SafeAreaView>

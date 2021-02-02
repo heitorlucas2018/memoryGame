@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MemoryGame</string>
+    <string name="powered">Powered by heitorSantos.com</string>
 </resources>
