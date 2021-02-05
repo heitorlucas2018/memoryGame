@@ -6,23 +6,29 @@
  * @flow strict-local
  */
 
-import React, { useEffect, useState} from 'react';
-import { SafeAreaView, View, StatusBar, ActivityIndicator } from 'react-native';
-import SplashScreen from './components/SplashScreen';
-import { Colors } from './Constants/Colors';
-import Routes from './Routes'
+import React, { useEffect } from 'react';
+import { SafeAreaView, View, StatusBar, Platform } from 'react-native';
+import { hideNavigationBar } from 'react-native-navigation-bar-color';
 
+import { Colors } from './Constants/Colors';
+import Routes from './Routes';
 
 const App: () => React$Node = () => {
-  
+
+  useEffect(() => {
+    if (Platform.OS !== 'ios') {
+      hideNavigationBar();
+    }
+  });
+
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.with}}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.with }}>
       <StatusBar
         hidden={true}
         animated={true}
         translucent={true}
         barStyle="default"
-        showHideTransition="slide"/>
+        showHideTransition="slide" />
       <View style={{ flex: 1, padding: 2 }}>
         <Routes />
       </View>

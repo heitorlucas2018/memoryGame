@@ -34,7 +34,7 @@ export default function MemoryEmoticonVew({ route, navigation }) {
             >
                 <Button
                     style={styled.button}
-                    text={"Novo Jogo" + data.length}
+                    text={"Novo Jogo"}
                     color={ColorButtons.primary}
                     onCLick={() => {
                         setResetGame(true)

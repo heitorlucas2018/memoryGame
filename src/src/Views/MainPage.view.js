@@ -8,7 +8,6 @@ import {
     useWindowDimensions,
     Pressable,
     Animated,
-    Easing
 } from 'react-native'
 import Icon from 'react-native-vector-icons/AntDesign'
 import { useNavigation } from '@react-navigation/native'
@@ -18,14 +17,18 @@ import Header from '../components/Header'
 import ButtonAbout from '../components/Button/Rounded'
 import useLocaleByObject from '../locale/hooks/useLocaleByObject'
 import FontFamily from '../Constants/FontsFamily'
+import FirebaseServices from '../Services/firebase.service'
 
 export default function MainPage({ route, navigation }) {
     const { width, height } = useWindowDimensions()
+    const [dataOfGame, setDataOfGame] = useState([]);
     const [largura, setLargura] = useState(new Animated.Value(0))
     const [altura, setAltura] = useState(new Animated.Value(0));
     const [opacity, setOpacity] = useState(new Animated.Value(0));
 
     useEffect(() => {
+        FirebaseServices.dataGame().then(dataOFList => setDataOfGame(dataOFList));
+
         Animated.sequence([
             Animated.timing(largura, {
                 toValue: Math.floor(width * .85),
@@ -67,12 +70,12 @@ export default function MainPage({ route, navigation }) {
                     />
                     <FlatList
                         style={styled.list}
-                        data={gameOfData}
+                        data={dataOfGame}
                         keyExtractor={({ item, index }) => index}
-                        renderItem={({ item: { content, data, type }, index }) =>
+                        renderItem={({ item: { label, data, type }, index }) =>
                         (<ItemList
                             key={index}
-                            content={content}
+                            content={label}
                             data={data}
                             typeList={type} />)}
                     />

@@ -55,7 +55,7 @@ export function ItemList({ label, data, navigation: { navigate } }) {
 
 const dataList = [
     { id: 0, label: 'Privacy Policy', content: 'Text documentation' },
-    { id: 1, label: 'Feedback', content: <EvaluationContainer /> },
+    { id: 1, label: 'Feedback', content: (<EvaluationContainer />) },
 ]
 
 const styled = StyleSheet.create({
