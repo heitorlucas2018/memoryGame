@@ -36,8 +36,8 @@
 		F213E80692394E9D863F5C63 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CC92E577789481194B69B77 /* Fontisto.ttf */; };
 		F41C3E7F0D9B4A2EA02B6513 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F44A3A10ACF3416297F99206 /* AntDesign.ttf */; };
 		FA84CFCBD1F245E0B974CFD8 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E73F1FF4A25246F1A16FFA61 /* FontAwesome5_Brands.ttf */; };
-		00105399548D48FC9F40EFF5 /* HachiMaruPop-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 333A7A44A1914522AC4CD568 /* HachiMaruPop-Regular.ttf */; };
-		9CF2420CDD5C4984B335E388 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD129F3E9DE744118F9A5416 /* PermanentMarker-Regular.ttf */; };
+		DDAAC9C6CE3841F39ED690BC /* HachiMaruPop-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 949F653960E941A29DAB0CBA /* HachiMaruPop-Regular.ttf */; };
+		76771512C3574BF8952CFA91 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35F6A742D5D745E983ACEA2B /* PermanentMarker-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +101,8 @@
 		F44A3A10ACF3416297F99206 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		FE45BB51994E94E699D39A18 /* Pods-memoryGame-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memoryGame-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-memoryGame-tvOSTests/Pods-memoryGame-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		FFD28126B04B4A50BD44AA49 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
-		333A7A44A1914522AC4CD568 /* HachiMaruPop-Regular.ttf */ = {isa = PBXFileReference; name = "HachiMaruPop-Regular.ttf"; path = "../assets/fonts/HachiMaruPop-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CD129F3E9DE744118F9A5416 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; name = "PermanentMarker-Regular.ttf"; path = "../assets/fonts/PermanentMarker-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		949F653960E941A29DAB0CBA /* HachiMaruPop-Regular.ttf */ = {isa = PBXFileReference; name = "HachiMaruPop-Regular.ttf"; path = "../assets/fonts/HachiMaruPop-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		35F6A742D5D745E983ACEA2B /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; name = "PermanentMarker-Regular.ttf"; path = "../assets/fonts/PermanentMarker-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +219,8 @@
 				CF8488323F0B4B4AB7E7CDEC /* Octicons.ttf */,
 				503E8996734E43DB9DC53AF4 /* SimpleLineIcons.ttf */,
 				6946A96F4BDD463190AA7169 /* Zocial.ttf */,
-				333A7A44A1914522AC4CD568 /* HachiMaruPop-Regular.ttf */,
-				CD129F3E9DE744118F9A5416 /* PermanentMarker-Regular.ttf */,
+				949F653960E941A29DAB0CBA /* HachiMaruPop-Regular.ttf */,
+				35F6A742D5D745E983ACEA2B /* PermanentMarker-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -420,8 +420,8 @@
 				1022EF873CC745A8B5A5AA5B /* Octicons.ttf in Resources */,
 				67C07C0FB6614375985846BF /* SimpleLineIcons.ttf in Resources */,
 				9426E5A6340942D1A79C1DD4 /* Zocial.ttf in Resources */,
-				00105399548D48FC9F40EFF5 /* HachiMaruPop-Regular.ttf in Resources */,
-				9CF2420CDD5C4984B335E388 /* PermanentMarker-Regular.ttf in Resources */,
+				DDAAC9C6CE3841F39ED690BC /* HachiMaruPop-Regular.ttf in Resources */,
+				76771512C3574BF8952CFA91 /* PermanentMarker-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,7 @@
 export const gameOfData = [
     {
-        id: 0,
         type: `text`,
-        content: {
+        label: {
             pt: 'Emoticos',
             en: 'Emoticos'
         },

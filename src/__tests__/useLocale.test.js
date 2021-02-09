@@ -1,4 +1,9 @@
+import { Platform } from "react-native";
 import { useLocale } from "../src/locale/hooks/";
+//Definindo mock do SO executado
+Platform.OS = 'android'
+
+//should only run for Android
 
 test('test hook useLocale - key not exists', () => {
     const value = `header.text`

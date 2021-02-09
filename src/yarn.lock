@@ -1158,6 +1158,11 @@
   resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-10.6.3.tgz#6ec380acfb1d149f551d44a179230f040b8786a1"
   integrity sha512-JWmhyna3jU2wYMQJTSQLaICTJnShFwB6O54Hg+CqmN2x/dtgm7HGR6OlAi3xYmbQUpZyUYGnvTRA5LHdPc30pQ==
 
+"@react-native-firebase/storage@^10.6.4":
+  version "10.6.4"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/storage/-/storage-10.6.4.tgz#2d8847bcc75c3c0a50e2a568badb16ac5e0c1146"
+  integrity sha512-ltz5Ie2gloimni8eU2AUdQKPRfbh74e/KfbXEzYXVeIZ2p+47jy6QQ2E/tV53yat5osIAMFz467IZ1A3aFeRIQ==
+
 "@react-navigation/core@^5.14.4":
   version "5.14.4"
   resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.14.4.tgz#f63a2cd214bddbd25e1181f9335c32dfc3b6460f"
