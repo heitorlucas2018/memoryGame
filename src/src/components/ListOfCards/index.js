@@ -41,7 +41,7 @@ function ListOfCards({ data, numColumns, tyleList }) {
     const secondCard = data[selections[1]]
 
     if (fristCard === secondCard) {
-      setScore(score + 1);
+      setScore(score + 10);
       setSelections([])
       setArrayOfCards((cards) => [...cards, fristCard])
     }

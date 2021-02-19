@@ -59,7 +59,7 @@ export default function EvaluationContainer() {
                 <View style={{ display: 'flex', padding: 5 }}>
                     <Text style={styled.textBody}>Comment:</Text>
                     <TextInput
-                        style={[styled.textInput, { minHeight: 250, maxHeight: 300 }]}
+                        style={[styled.textInput, { minHeight: 150, maxHeight: 200 }]}
                         onChangeText={(e) => setComentario(e)}
                         value={comentario}
                         keyboardAppearance="default"

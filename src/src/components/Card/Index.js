@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, Animated, TouchableOpacity, ViewPropTypes } from 'react-native';
+import { View, Text, Image, TouchableOpacity, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Circle from '../CircleTimeout';
@@ -41,7 +41,10 @@ export function CardContent({ type, content }) {
   if (type == 'text') {
     return <Text style={CardStyle.text}>{content}</Text>
   } else if (type == 'image') {
-    return <></>
+    return <Image style={{
+      width: '70%',
+      height: '70%'
+    }} source={{uri: content}} />
   } else if (type == 'color') {
     return <View style={{
       backgroundColor: content,

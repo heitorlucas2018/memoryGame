@@ -9,5 +9,8 @@
         "evaluation": {
             "title": "Avalie-nos"
         }
+    },
+    "game": {
+        "score": "Score"
     }
 }

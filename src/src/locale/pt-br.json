@@ -9,5 +9,8 @@
         "evaluation": {
             "title": "Fale Conosco"
         }
+    },
+    "game": {
+        "score": "Pontuação"
     }
 }

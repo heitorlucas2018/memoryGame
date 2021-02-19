@@ -3,6 +3,7 @@ import { Pressable, SafeAreaView, StyleSheet, Text, View, FlatList, ActivityIndi
 import Icon from 'react-native-vector-icons/AntDesign';
 import Header from '../../components/Header';
 import { Colors } from '../../Constants/Colors';
+import FirebaseServices from '../../Services/firebase.service';
 import EvaluationContainer from '../EvaluationContainer';
 
 const ProfilePageView = ({ navigation }) => {
@@ -10,7 +11,7 @@ const ProfilePageView = ({ navigation }) => {
     const [listbyData, setListbyData] = useState([]);
 
     useEffect(() => {
-        setListbyData(dataList)
+        FirebaseServices.dataAboutApp().then(data => setListbyData([...data, ...dataEvaluation]));
     }, []);
 
     return (
@@ -53,10 +54,7 @@ export function ItemList({ label, data, navigation: { navigate } }) {
     )
 }
 
-const dataList = [
-    { id: 0, label: 'Privacy Policy', content: 'Text documentation' },
-    { id: 1, label: 'Feedback', content: (<EvaluationContainer />) },
-]
+const dataEvaluation = [{ id: 1, label: 'Feedback', content: (<EvaluationContainer />) }];
 
 const styled = StyleSheet.create({
     buttonClouse: {

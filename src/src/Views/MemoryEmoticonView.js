@@ -7,6 +7,7 @@ import Button from '../components/Button/Rounded'
 
 import { ColorButtons, Colors, } from '../Constants/Colors'
 import { Embaralhar, ScoreViewContext } from '../helpers/utils'
+import TextLocale from '../components/TextLocale';
 
 export default function MemoryEmoticonVew({ route, navigation }) {
     const [score, setScore] = useState(0);
@@ -46,10 +47,10 @@ export default function MemoryEmoticonVew({ route, navigation }) {
                 padding: 5,
                 borderWidth: 2
             }}>
-                <Text
+                <TextLocale keyString="game.score" 
                     style={{ fontSize: 20, textAlign: 'center' }}>
-                    Acertos: {score}
-                </Text>
+                    : {score}
+                </TextLocale>
             </View>
             { !dataPairs.length && <ActivityIndicator size='large' color={Colors.main} />}
             <View style={styled.contentList}>
