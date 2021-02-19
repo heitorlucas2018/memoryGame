@@ -54,10 +54,9 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 25,
-        fontWeight: 'bold',
         color: Colors.textColor,
         textAlign: 'center',
         alignSelf: 'center',
-        fontFamily: FontFamily.title
+        fontFamily: FontFamily.text
     }
 })

@@ -159,8 +159,7 @@ const styled = StyleSheet.create({
 
     },
     itemText: {
-        fontSize: 20,
-        fontWeight: '300',
+        fontSize: 18,
         marginLeft: 15,
         flex: 1.5,
         fontFamily: FontFamily.title

@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Modal, SafeAreaView, Text, useWindowDimensions, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { KEY_SCORE_GAME } from '../../Constants/keys';
 
 import { ScoreViewContext } from '../../helpers/utils';
+import StorageGame from '../../Services/storage';
 
 import Card from '../Card/Index'
 
@@ -41,9 +43,11 @@ function ListOfCards({ data, numColumns, tyleList }) {
     const secondCard = data[selections[1]]
 
     if (fristCard === secondCard) {
-      setScore(score + 10);
+      const pontuacao = score + 10;
+      setScore(pontuacao);
       setSelections([])
       setArrayOfCards((cards) => [...cards, fristCard])
+      StorageGame.set(KEY_SCORE_GAME,pontuacao)
     }
 
   }, [selections])

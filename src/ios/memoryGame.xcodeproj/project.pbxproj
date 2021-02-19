@@ -38,6 +38,11 @@
 		FA84CFCBD1F245E0B974CFD8 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E73F1FF4A25246F1A16FFA61 /* FontAwesome5_Brands.ttf */; };
 		DDAAC9C6CE3841F39ED690BC /* HachiMaruPop-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 949F653960E941A29DAB0CBA /* HachiMaruPop-Regular.ttf */; };
 		76771512C3574BF8952CFA91 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35F6A742D5D745E983ACEA2B /* PermanentMarker-Regular.ttf */; };
+		0D63DAA788F04227A36A4B39 /* ComicKhazi-X05j.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 116CFAEF4A5F4275BA31A1F6 /* ComicKhazi-X05j.ttf */; };
+		6FA0A6CB34AC4401B94D0CE0 /* Jumpman-1m20.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B0EB5212CF74553B13FDC1E /* Jumpman-1m20.ttf */; };
+		83BBC3D4BB8046968258F9F8 /* Moonhouse-yE5M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E95B32D8E434CF5A402F363 /* Moonhouse-yE5M.ttf */; };
+		D0E3F926393F43A4B13D6E0B /* TrulyMadlyDpad-a72o.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C31D125B6934A1B9F47212E /* TrulyMadlyDpad-a72o.ttf */; };
+		6EE2EF14108B48CEA97BE518 /* VirtualRotRegular-R51V.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 409A2B52FCCD4E77BA0C3458 /* VirtualRotRegular-R51V.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +108,11 @@
 		FFD28126B04B4A50BD44AA49 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		949F653960E941A29DAB0CBA /* HachiMaruPop-Regular.ttf */ = {isa = PBXFileReference; name = "HachiMaruPop-Regular.ttf"; path = "../assets/fonts/HachiMaruPop-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		35F6A742D5D745E983ACEA2B /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; name = "PermanentMarker-Regular.ttf"; path = "../assets/fonts/PermanentMarker-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		116CFAEF4A5F4275BA31A1F6 /* ComicKhazi-X05j.ttf */ = {isa = PBXFileReference; name = "ComicKhazi-X05j.ttf"; path = "../assets/fonts/ComicKhazi-X05j.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7B0EB5212CF74553B13FDC1E /* Jumpman-1m20.ttf */ = {isa = PBXFileReference; name = "Jumpman-1m20.ttf"; path = "../assets/fonts/Jumpman-1m20.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8E95B32D8E434CF5A402F363 /* Moonhouse-yE5M.ttf */ = {isa = PBXFileReference; name = "Moonhouse-yE5M.ttf"; path = "../assets/fonts/Moonhouse-yE5M.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C31D125B6934A1B9F47212E /* TrulyMadlyDpad-a72o.ttf */ = {isa = PBXFileReference; name = "TrulyMadlyDpad-a72o.ttf"; path = "../assets/fonts/TrulyMadlyDpad-a72o.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		409A2B52FCCD4E77BA0C3458 /* VirtualRotRegular-R51V.ttf */ = {isa = PBXFileReference; name = "VirtualRotRegular-R51V.ttf"; path = "../assets/fonts/VirtualRotRegular-R51V.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +231,11 @@
 				6946A96F4BDD463190AA7169 /* Zocial.ttf */,
 				949F653960E941A29DAB0CBA /* HachiMaruPop-Regular.ttf */,
 				35F6A742D5D745E983ACEA2B /* PermanentMarker-Regular.ttf */,
+				116CFAEF4A5F4275BA31A1F6 /* ComicKhazi-X05j.ttf */,
+				7B0EB5212CF74553B13FDC1E /* Jumpman-1m20.ttf */,
+				8E95B32D8E434CF5A402F363 /* Moonhouse-yE5M.ttf */,
+				3C31D125B6934A1B9F47212E /* TrulyMadlyDpad-a72o.ttf */,
+				409A2B52FCCD4E77BA0C3458 /* VirtualRotRegular-R51V.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -422,6 +437,11 @@
 				9426E5A6340942D1A79C1DD4 /* Zocial.ttf in Resources */,
 				DDAAC9C6CE3841F39ED690BC /* HachiMaruPop-Regular.ttf in Resources */,
 				76771512C3574BF8952CFA91 /* PermanentMarker-Regular.ttf in Resources */,
+				0D63DAA788F04227A36A4B39 /* ComicKhazi-X05j.ttf in Resources */,
+				6FA0A6CB34AC4401B94D0CE0 /* Jumpman-1m20.ttf in Resources */,
+				83BBC3D4BB8046968258F9F8 /* Moonhouse-yE5M.ttf in Resources */,
+				D0E3F926393F43A4B13D6E0B /* TrulyMadlyDpad-a72o.ttf in Resources */,
+				6EE2EF14108B48CEA97BE518 /* VirtualRotRegular-R51V.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,1 @@
+export const KEY_SCORE_GAME = 'keyScoreGameTodUser';

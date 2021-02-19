@@ -1,18 +1,19 @@
-import React, {Component, useState} from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {SafeAreaView, StyleSheet, useWindowDimensions, View} from 'react-native';
+import HTML from "react-native-render-html";
 import {ScrollView} from 'react-native-gesture-handler';
-import ButtonGoBack from '../../components/ButtonGoBack';
 import Header from '../../components/Header';
 import {Colors} from '../../Constants/Colors';
 
 const ProfilePageView = ({route}) => {
   const {title, content} = route.params;
+  const contentWidth = useWindowDimensions().width;
 
   const children =
     content instanceof Object ? (
       content
     ) : (
-      <Text style={styled.textBody}>{content}</Text>
+      <HTML source={{ html: content }} contentWidth={contentWidth} />
     );
 
   return (
@@ -20,7 +21,7 @@ const ProfilePageView = ({route}) => {
       <View style={{padding: 10}}>
         <Header text={title} goBack={true} />
         <ScrollView>
-          <SafeAreaView style={{marginTop: 40, padding: 5}}>
+          <SafeAreaView style={{display: 'flex', flex: 1}}>
             {children}
           </SafeAreaView>
         </ScrollView>

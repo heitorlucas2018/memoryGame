@@ -59,6 +59,11 @@
 		<string>Zocial.ttf</string>
 		<string>HachiMaruPop-Regular.ttf</string>
 		<string>PermanentMarker-Regular.ttf</string>
+		<string>ComicKhazi-X05j.ttf</string>
+		<string>Jumpman-1m20.ttf</string>
+		<string>Moonhouse-yE5M.ttf</string>
+		<string>TrulyMadlyDpad-a72o.ttf</string>
+		<string>VirtualRotRegular-R51V.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
