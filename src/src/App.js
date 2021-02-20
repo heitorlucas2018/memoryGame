@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { SafeAreaView, View, StatusBar, Platform } from 'react-native';
 import { hideNavigationBar } from 'react-native-navigation-bar-color';
 
@@ -15,11 +15,9 @@ import Routes from './Routes';
 
 const App: () => React$Node = () => {
 
-  useEffect(() => {
-    if (Platform.OS !== 'ios') {
-      hideNavigationBar();
-    }
-  });
+  if (Platform.OS !== 'ios') {
+    hideNavigationBar();
+  }
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.with }}>

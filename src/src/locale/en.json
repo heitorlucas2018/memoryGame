@@ -1,13 +1,13 @@
 {
     "header": {
         "page": {
-            "main": "Selection model of cards",
-            "profile": "Informations"
+            "main": "Select game model",
+            "profile": "Abouts"
         }
     },
     "container": {
         "evaluation": {
-            "title": "Avalie-nos"
+            "title": "Evaluation"
         }
     },
     "game": {
