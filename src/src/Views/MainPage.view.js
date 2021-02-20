@@ -25,6 +25,7 @@ export default function MainPage({ route, navigation }) {
     const [largura, setLargura] = useState(new Animated.Value(0))
     const [altura, setAltura] = useState(new Animated.Value(0));
     const [opacity, setOpacity] = useState(new Animated.Value(0));
+    const [score, setScore] = useState(0);
 
     useEffect(() => {
         FirebaseServices.dataGame().then(dataOFList => setDataOfGame(dataOFList));
@@ -46,7 +47,7 @@ export default function MainPage({ route, navigation }) {
                 useNativeDriver: false
             }),
         ]).start()
-    })
+    }, [])
 
     return (
         <SafeAreaView style={[styled.container, styled.sobreamento]}>
@@ -55,6 +56,7 @@ export default function MainPage({ route, navigation }) {
                 iconName="infocirlceo"
                 onCLick={() => navigation.navigate("Profile")}
             />
+            
             <Animated.View
                 style={[
                     styled.content,

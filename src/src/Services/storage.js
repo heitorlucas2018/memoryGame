@@ -1,4 +1,6 @@
-//import AsyncStorage from 'react-native';
+//import {AsyncStorage} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 export default class StorageGame {
 
@@ -7,18 +9,20 @@ export default class StorageGame {
   }
 
   static async set(key, data) {
-    let value = '';
-    if (data instanceof String) {
-      value = data;
-    } else if (data instanceof Number) {
-      value = `${data}`;
-    } else {
-      return;
-    }
-   // await AsyncStorage.setItem(`${StorageGame.keyApp}:${key}`, value);
+    const value = JSON.stringify(data)
+    await AsyncStorage.setItem(`@STORAGETOGAME`, value);
   }
 
   static async get(key) {
-   // return await AsyncStorage.getItem(`${this.keyApp}:${key}`);
+    try {
+      const value =  await AsyncStorage.getItem(`@STORAGETOGAME`);
+      if(value != null) {
+        return JSON.parse(value);
+      } else {
+        return 0
+      }
+    } catch (error) {
+      console.log('ERROR::StorageGame->get', error)
+    }
   }
 }
