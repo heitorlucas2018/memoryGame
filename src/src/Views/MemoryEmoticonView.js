@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {
   Animated,
   Text,
@@ -9,54 +9,47 @@ import {
   SafeAreaView,
   ActivityIndicator,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5'
+
 import Header from '../components/Header';
 import ListCards from '../components/ListOfCards';
 import Button from '../components/Button/Rounded';
-
 import {ColorButtons, Colors} from '../Constants/Colors';
 import {Embaralhar, ScoreViewContext} from '../helpers/utils';
 import TextLocale from '../components/TextLocale';
-import StorageGame from '../Services/storage';
-import {KEY_SCORE_GAME} from '../Constants/keys';
+import FontFamily from '../Constants/FontsFamily';
+import CoroaBase64 from '../Constants/imageCoroaBase64';
 
 export default function MemoryEmoticonVew({route, navigation}) {
-  const [score, setScore] = useState(0);
-  const [resetGame, setResetGame] = useState(true);
+  const {score, setScore, setResetGame, resetGame} = useContext(ScoreViewContext);
   const {titlePage, data, typeList} = route.params;
   const [dataPairs, setDataPairs] = useState([]);
 
+  useEffect(()=> setResetGame(true), [])
+
   useEffect(() => {
-    if (!score) {
-      StorageGame.get(KEY_SCORE_GAME)
-        .then((result) => {
-          const value_count = parseInt(result) * 1;
-          setScore(value_count);
+    const carregarJogo = () => {
+      const value_count = parseInt(score) * 1;
+      const valueCount = Math.trunc(value_count / 10);
+      const listOfCards = [];
 
-          const valueCount = Math.trunc(value_count / 10);
-          const listOfCards = [];
-
-          if (valueCount <= data.length) {
-              const size = valueCount < 1 ? 1 : valueCount
-            for (let count = 0; count < size; count++) {
-              listOfCards.push(data[count]);
-            }
-            setDataPairs(Embaralhar([...listOfCards, ...listOfCards]));
-          } else {
-            setDataPairs(Embaralhar([...data, ...data]));
-          }
-
-
-        })
-        .catch((error) => console.log('ERROR::mainPage->sorageGame', error));
+      if (valueCount <= data.length) {
+        const size = valueCount < 1 ? 1 : valueCount;
+        for (let count = 0; count < size; count++) {
+          listOfCards.push(data[count]);
+        }
+        setDataPairs(Embaralhar([...listOfCards, ...listOfCards]));
+      } else {
+        setDataPairs(Embaralhar([...data, ...data]));
+      } 
     }
 
     if (resetGame) {
       setDataPairs([]);
+      setScore(0);
+      carregarJogo();
       setResetGame(false);
     }
-    if (dataPairs.length > 0) return;
-
-    //setDataPairs(Embaralhar([...data, ...data]));
   }, [resetGame]);
 
   return (
@@ -82,19 +75,16 @@ export default function MemoryEmoticonVew({route, navigation}) {
           padding: 5,
           borderWidth: 2,
         }}>
-        <TextLocale
-          keyString="game.score"
-          style={{fontSize: 20, textAlign: 'center'}}>
-          : {score}
-        </TextLocale>
+        <Text style={styled.subHeader}>
+          <CoroaBase64 />
+          {` ${score}`}
+        </Text>
       </View>
       {!dataPairs.length && (
         <ActivityIndicator size="large" color={Colors.main} />
       )}
       <View style={styled.contentList}>
-        <ScoreViewContext.Provider value={{score, setScore, setResetGame}}>
           <ListCards tyleList={typeList} data={dataPairs} />
-        </ScoreViewContext.Provider>
       </View>
     </SafeAreaView>
   );
@@ -126,6 +116,11 @@ const styled = StyleSheet.create({
     marginRight: -2,
     borderWidth: 3,
     zIndex: 1,
+  },
+  subHeader: {
+    fontSize: 20,
+    textAlign: 'center',
+    fontFamily: FontFamily.title,
   },
   contentList: {
     display: 'flex',

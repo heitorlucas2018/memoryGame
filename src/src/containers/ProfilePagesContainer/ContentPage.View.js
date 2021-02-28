@@ -20,7 +20,7 @@ const ProfilePageView = ({route}) => {
     <SafeAreaView>
       <View style={{padding: 10}}>
         <Header text={title} goBack={true} />
-        <ScrollView>
+        <ScrollView style={{height: '90%'}}>
           <SafeAreaView style={{display: 'flex', flex: 1}}>
             {children}
           </SafeAreaView>

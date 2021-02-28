@@ -64,7 +64,7 @@ function ListOfCards({data, numColumns, tyleList}) {
         .catch((error) => console.log('ERROR::ListOfCards->StorageGame', error));
     } else {
       const valuerandom = Math.trunc(Math.random() * 10 + 2);
-      const pontuacao = Math.round(1 * score - valuerandom);
+      const pontuacao = (score <= 0) ? 0 : Math.round(1 * score - valuerandom);
       setScore(pontuacao);
       StorageGame.set(KEY_SCORE_GAME, pontuacao)
         .catch((error) => console.log('ERROR::ListOfCards->StorageGame', error));

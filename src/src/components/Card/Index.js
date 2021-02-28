@@ -43,7 +43,9 @@ export function CardContent({ type, content }) {
   } else if (type == 'image') {
     return <Image style={{
       width: '70%',
-      height: '70%'
+      height: '70%',
+      minWidth: 50,
+      minHeight: 50
     }} source={{uri: content}} />
   } else if (type == 'color') {
     return <View style={{
